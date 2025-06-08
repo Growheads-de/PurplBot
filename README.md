@@ -122,10 +122,7 @@ Klicke auf einen "Bericht" Button:
 👤 Benutzer: [Klickt "📋 Bericht Green Crack"]
 
 🤖 Bot: 📋 Generiere Bericht...
-🤖 Bot: [Sendet Bericht-Bild]
-
-![Beispiel-Analysebericht](sample-report.png)
-
+🤖 Bot: [Sendet Analysebericht als Bild - siehe sample-report.png]
       📋 Analysebericht für Name: Green Crack
       
       Generiert aus: probe-001.csv
@@ -142,6 +139,10 @@ Klicke auf den "Drucken" Button für Thermodruck mit Logo:
 🤖 Bot: 🖨️ Sende an Drucker...
 🤖 Bot: ✅ Bericht erfolgreich gedruckt für Name: Green Crack
 ```
+
+**Beispiel des generierten Analyseberichts:**
+
+![Beispiel-Analysebericht](sample-report.png)
 
 **Thermoprinbericht-Ausgabe:**
 - Logo (bonlogo.png) wird oben gedruckt
