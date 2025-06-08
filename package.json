@@ -1,0 +1,35 @@
+{
+  "name": "telegram-csv-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot that receives zipped CSV files and returns them as ASCII tables",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:start:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop PurplBot",
+    "pm2:restart": "pm2 restart PurplBot",
+    "pm2:delete": "pm2 delete PurplBot",
+    "pm2:logs": "pm2 logs PurplBot",
+    "pm2:status": "pm2 status",
+    "pm2:monit": "pm2 monit"
+  },
+  "dependencies": {
+    "telegraf": "^4.15.6",
+    "yauzl": "^2.10.0",
+    "csv-parser": "^3.0.0",
+    "cli-table3": "^0.6.3",
+    "dotenv": "^16.3.1",
+    "canvas": "^2.11.2",
+    "sharp": "^0.33.2",
+    "node-thermal-printer": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "pm2": "^5.3.0"
+  },
+  "keywords": ["telegram", "bot", "csv", "ascii", "table"],
+  "author": "",
+  "license": "MIT"
+} 
