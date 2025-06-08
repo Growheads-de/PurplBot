@@ -80,6 +80,71 @@ Der Purpl Pro ist ein tragbares Cannabis-Analysegerät, das schnelle und genaue 
 3. **Lade die ZIP-Datei** mit den CSV-Exporten hoch
 4. **Erhalte ASCII-Tabellen** für jede CSV-Datei in der ZIP
 
+## Bot-Konversationsablauf
+
+### Schritt 1: Datei hochladen
+Sende eine ZIP-Datei mit Purpl Pro CSV-Exporten an den Bot:
+
+```
+👤 Benutzer: [Sendet purpl-pro-export.zip]
+
+🤖 Bot: ⏳ Verarbeite deine ZIP-Datei...
+🤖 Bot: ✅ 3 CSV-Datei(en) gefunden. Konvertiere zu Tabellen...
+```
+
+### Schritt 2: Tabellen und Bericht-Buttons erhalten
+Der Bot antwortet mit ASCII-Tabellen und interaktiven Buttons:
+
+```
+🤖 Bot: 📄 probe-001.csv
+
+┌──────────────┬──────────┬──────────┬──────────┐
+│ Name         │ THC      │ CBD      │ Feuchtig │
+├──────────────┼──────────┼──────────┼──────────┤
+│ Green Crack  │ 18.5     │ 0.8      │ 12.3     │
+│ Blue Dream   │ 22.1     │ 1.2      │ 11.8     │
+│ OG Kush      │ 19.7     │ 0.5      │ 13.1     │
+└──────────────┴──────────┴──────────┴──────────┘
+
+📊 Zusammenfassung:
+• Zeilen: 3
+• Spalten: 4
+
+📋 Klicke einen Button für einen Bericht zu Name
+
+[📋 Bericht Green Crack] [📋 Bericht Blue Dream] [📋 Bericht OG Kush]
+```
+
+### Schritt 3: Analysebericht anfordern
+Klicke auf einen "Bericht" Button:
+
+```
+👤 Benutzer: [Klickt "📋 Bericht Green Crack"]
+
+🤖 Bot: 📋 Generiere Bericht...
+🤖 Bot: [Sendet Bericht-Bild]
+      📋 Analysebericht für Name: Green Crack
+      
+      Generiert aus: probe-001.csv
+      
+      [🖨️ Drucken]
+```
+
+### Schritt 4: Thermodruck (Optional)
+Klicke auf den "Drucken" Button für Thermodruck mit Logo:
+
+```
+👤 Benutzer: [Klickt "🖨️ Drucken"]
+
+🤖 Bot: 🖨️ Sende an Drucker...
+🤖 Bot: ✅ Bericht erfolgreich gedruckt für Name: Green Crack
+```
+
+**Thermoprinbericht-Ausgabe:**
+- Logo (bonlogo.png) wird oben gedruckt
+- Professioneller Analysebericht mit allen Messwerten
+- Saubere Formatierung für 58mm Thermodrucker
+
 ### Unterstützte Funktionen
 
 - **Dateitypen**: ZIP-Dateien mit CSV-Dateien aus Purpl Pro Mobile App
