@@ -123,6 +123,9 @@ Klicke auf einen "Bericht" Button:
 
 🤖 Bot: 📋 Generiere Bericht...
 🤖 Bot: [Sendet Bericht-Bild]
+
+![Beispiel-Analysebericht](sample-report.png)
+
       📋 Analysebericht für Name: Green Crack
       
       Generiert aus: probe-001.csv
@@ -191,43 +194,6 @@ Klicke auf den "Drucken" Button für Thermodruck mit Logo:
 - Prüfe dass Port 9100 offen und erreichbar ist
 - Stelle sicher dass der Drucker im ESC/POS-Modus ist
 - Teste mit `ping <drucker_ip>` und `telnet <drucker_ip> 9100`
-
-## Beispiel
-
-Exportiere CSV-Daten aus der Purpl Pro Mobile App als ZIP-Datei wie:
-
-```
-purpl-pro-export.zip
-├── probe-001.csv
-├── probe-002.csv
-└── probe-003.csv
-```
-
-Der Bot antwortet mit ASCII-Tabellen für jede CSV:
-
-```
-📄 **probe-001.csv**
-
-┌──────────┬──────────┬──────────┬──────────┐
-│ Name     │ THC      │ CBD      │ Feuchtig │
-├──────────┼──────────┼──────────┼──────────┤
-│ Sample A │ 18.5     │ 0.8      │ 12.3     │
-│ Sample B │ 22.1     │ 1.2      │ 11.8     │
-└──────────┴──────────┴──────────┴──────────┘
-```
-
-### Beispiel-Analysebericht
-
-Für Purpl Pro Analysedaten kann der Bot professionelle thermogedruckte Berichte generieren:
-
-![Beispiel-Analysebericht](sample-report.png)
-
-Der Bericht enthält:
-- Probeninformationen (Name, Datum/Zeit)
-- THC-Gehalt in Prozent (Purpl Pro Messung)
-- CBD-Gehalt in Prozent (Purpl Pro Messung)
-- Feuchtigkeitsgehalt (Purpl Pro Messung)
-- Wasseraktivitätswerte (Purpl Pro Messung)
 
 ## Konfiguration
 
