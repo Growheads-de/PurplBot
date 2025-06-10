@@ -22,7 +22,7 @@ const checkAuthorization = (ctx, next) => {
 
 Deine Telegram ID: \`${userId}\`
 
-Dieser Bot ist nur für autorisierte Benutzer verfügbar. Bitte kontaktiere den Administrator um Zugang mit der obigen ID zu beantragen.
+PurplBot ist nur für autorisierte Benutzer verfügbar. Bitte kontaktiere den Administrator um Zugang mit der obigen ID zu beantragen.
 
 _Hinweis: Du kannst deine ID kopieren, indem du darauf tippst._`;
     

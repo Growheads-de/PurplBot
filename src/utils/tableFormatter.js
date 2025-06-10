@@ -76,9 +76,7 @@ function csvToAsciiTable(csvData, fileName, chatId, csvDataStore) {
         result += '```';
         
         // Add summary info
-        result += `\n\n📊 *Zusammenfassung:*`;
-        result += `\n• Zeilen: ${dataToShow.length}${csvData.length > maxRows ? ` von ${csvData.length}` : ''}`;
-        result += `\n• Spalten: ${headers.length}`;
+        result += `\n\n📊 *${dataToShow.length}${csvData.length > maxRows ? ` von ${csvData.length}` : ''} Ergebnisse*`;
         
         if (csvData.length > maxRows) {
             result += `\n\n⚠️ _Erste ${maxRows} Zeilen für mobile Lesbarkeit angezeigt_`;

@@ -1,7 +1,7 @@
 {
-  "name": "telegram-csv-bot",
+  "name": "purplbot",
   "version": "1.0.0",
-  "description": "A Telegram bot that receives zipped CSV files and returns them as ASCII tables",
+  "description": "PurplBot - A Telegram bot that receives zipped CSV files from Purpl Pro cannabis analyzers and returns professional analysis reports with thermal printing",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",

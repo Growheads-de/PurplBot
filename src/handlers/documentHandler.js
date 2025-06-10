@@ -2,6 +2,7 @@ const { Markup } = require('telegraf');
 const { downloadFile, processZipFile, cleanupFile } = require('../utils/fileHandler');
 const { csvToAsciiTable, sendLongMessage } = require('../utils/tableFormatter');
 const { renderReportBuffer, printReport } = require('../services/reportGenerator');
+const { checkAuthorization } = require('../config/auth');
 
 function setupDocumentHandlers(bot, csvDataStore, tempDir) {
     // Handle document uploads
@@ -164,6 +165,14 @@ function setupDocumentHandlers(bot, csvDataStore, tempDir) {
 
     // Handle thermal print button callbacks
     bot.action(/^print_(.+)_(\d+)$/, async (ctx) => {
+        // Check authorization for print functionality
+        try {
+            await checkAuthorization(ctx, () => {});
+        } catch (authError) {
+            await ctx.answerCbQuery('❌ Du bist nicht berechtigt, die Druckfunktion zu verwenden.');
+            return;
+        }
+
         try {
             const [, dataKey, rowIndex] = ctx.match;
             const storedData = csvDataStore.get(dataKey);

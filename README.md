@@ -43,17 +43,18 @@ Der Purpl Pro ist ein tragbares Cannabis-Analysegerät, das schnelle und genaue 
    - Ersetze `your_telegram_bot_token_here` mit deinem echten Bot-Token
    - Hole dir deinen Bot-Token von [@BotFather](https://t.me/botfather) auf Telegram
 
-5. **Zugangskontrolle konfigurieren**
-   - Setze `AUTHORIZED_USERS` auf eine kommagetrennte Liste von autorisierten Telegram-Benutzer-IDs
-   - Um eine Benutzer-ID zu erhalten, lass sie eine beliebige Nachricht an den Bot senden (er zeigt ihre ID an, wenn sie nicht autorisiert sind)
-   - Leer lassen oder Variable entfernen um allen Benutzern zu erlauben
+5. **Zugangskontrolle für Druckfunktion konfigurieren**
+   - Setze `AUTHORIZED_USERS` auf eine kommagetrennte Liste von autorisierten Telegram-Benutzer-IDs für die Druckfunktion
+   - Um eine Benutzer-ID zu erhalten, lass sie eine beliebige Nachricht an den Bot senden (ID wird in den Logs angezeigt)
+   - Leer lassen oder Variable entfernen um allen Benutzern das Drucken zu erlauben
+   - **Hinweis**: Alle anderen Funktionen (CSV-Upload, Tabellen-Anzeige, Bericht-Generierung) sind ohne Autorisierung verfügbar
 
 6. **Thermodrucker konfigurieren (optional)**
    - Setze `THERMAL_PRINTER_IP` auf die IP-Adresse deines Druckers
    - Setze `THERMAL_PRINTER_PORT` auf den Port deines Druckers (normalerweise 9100)
    - Platziere `bonlogo.png` im Projektroot für Logo-Druck
 
-7. **Bot starten**
+7. **PurplBot starten**
    ```bash
    # Entwicklungsmodus mit Auto-Neustart
    npm run dev
@@ -106,9 +107,7 @@ Der Bot antwortet mit ASCII-Tabellen und interaktiven Buttons:
 │ OG Kush      │ 19.7     │ 0.5      │ 13.1     │
 └──────────────┴──────────┴──────────┴──────────┘
 
-📊 Zusammenfassung:
-• Zeilen: 3
-• Spalten: 4
+📊 3 Ergebnisse
 
 📋 Klicke einen Button für einen Bericht zu Name
 
@@ -230,18 +229,18 @@ Für VPS-Deployment mit nginx:
 
 1. **Nginx-Konfiguration kopieren**:
    ```bash
-   sudo cp nginx.conf.example /etc/nginx/sites-available/telegram-csv-bot
+   sudo cp nginx.conf.example /etc/nginx/sites-available/purplbot
    ```
 
 2. **Konfiguration bearbeiten**:
    ```bash
-   sudo nano /etc/nginx/sites-available/telegram-csv-bot
+   sudo nano /etc/nginx/sites-available/purplbot
    # Ersetze 'your-domain.com' mit deiner echten Domain
    ```
 
 3. **Seite aktivieren**:
    ```bash
-   sudo ln -s /etc/nginx/sites-available/telegram-csv-bot /etc/nginx/sites-enabled/
+   sudo ln -s /etc/nginx/sites-available/purplbot /etc/nginx/sites-enabled/
    ```
 
 4. **SSL-Zertifikat erhalten** (mit Let's Encrypt):
@@ -266,7 +265,7 @@ Für VPS-Deployment mit nginx:
 ## Dateistruktur
 
 ```
-telegram-csv-bot/
+purplbot/
 ├── bot.js              # Haupt-Bot-Logik
 ├── package.json        # Abhängigkeiten und Skripte
 ├── .env.example        # Umgebungsvorlage
@@ -285,7 +284,7 @@ telegram-csv-bot/
 
 ## Fehlerbehandlung
 
-Der Bot behandelt verschiedene Fehlerfälle:
+PurplBot behandelt verschiedene Fehlerfälle:
 
 - Ungültige Dateitypen (Nicht-ZIP-Dateien)
 - Große Dateien (>20MB)
@@ -296,7 +295,7 @@ Der Bot behandelt verschiedene Fehlerfälle:
 
 ## Mitwirken
 
-Gerne kannst du Issues und Pull Requests einreichen um den Bot zu verbessern!
+Gerne kannst du Issues und Pull Requests einreichen um PurplBot zu verbessern!
 
 ## Lizenz
 

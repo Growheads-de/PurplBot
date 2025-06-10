@@ -20,7 +20,7 @@ if (!fs.existsSync(tempDir)) {
 const csvDataStore = new Map();
 
 // Apply authorization middleware to all messages and commands
-bot.use(checkAuthorization);
+// bot.use(checkAuthorization);
 
 // Setup command handlers
 setupCommands(bot);

@@ -2,7 +2,7 @@
 function setupCommands(bot) {
     bot.start((ctx) => {
         const welcomeMessage = `
-🧪 **Cannabis-Analyse-Bericht-Bot**
+🧪 **PurplBot**
 
 Sende mir einfach eine ZIP-Datei mit deinen Labordaten um loszulegen! 🧪📊
         `;
@@ -12,7 +12,10 @@ Sende mir einfach eine ZIP-Datei mit deinen Labordaten um loszulegen! 🧪📊
 
     bot.help((ctx) => {
         const helpMessage = `
-📋 **Cannabis-Analyse-Bericht-Bot**
+📋 **PurplBot**
+
+https://github.com/Growheads-de/PurplBot
+
         `;
         
         ctx.replyWithMarkdown(helpMessage);
