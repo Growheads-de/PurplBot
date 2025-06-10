@@ -84,8 +84,8 @@ function setupDocumentHandlers(bot, csvDataStore, tempDir) {
                 return;
             }
             
-            const { csvData, fileName, headers, idColumn, nameColumn } = storedData;
-            const row = csvData[parseInt(rowIndex)];
+            const { originalCsvData, fileName, headers, idColumn, nameColumn } = storedData;
+            const row = originalCsvData[parseInt(rowIndex)];
             
             if (!row) {
                 await ctx.answerCbQuery('❌ Zeile nicht gefunden.');
@@ -182,8 +182,8 @@ function setupDocumentHandlers(bot, csvDataStore, tempDir) {
                 return;
             }
             
-            const { csvData, fileName, headers, idColumn, nameColumn } = storedData;
-            const row = csvData[parseInt(rowIndex)];
+            const { originalCsvData, fileName, headers, idColumn, nameColumn } = storedData;
+            const row = originalCsvData[parseInt(rowIndex)];
             
             if (!row) {
                 await ctx.answerCbQuery('❌ Zeile nicht gefunden.');
