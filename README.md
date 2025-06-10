@@ -121,12 +121,11 @@ Klicke auf einen "Bericht" Button:
 👤 Benutzer: [Klickt "📋 Bericht Green Crack"]
 
 🤖 Bot: 📋 Generiere Bericht...
+
 🤖 Bot: [Sendet Analysebericht als Bild - siehe sample-report.png]
-      📋 Analysebericht für Name: Green Crack
-      
-      Generiert aus: probe-001.csv
-      
-      [🖨️ Drucken]
+📋 Analysebericht für Name: Green Crack
+Generiert aus: probe-001.csv
+[🖨️ Drucken]
 ```
 
 ### Schritt 4: Thermodruck (Optional)
